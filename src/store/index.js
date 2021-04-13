@@ -5,7 +5,7 @@ export default createStore({
     users: [],
     currentUser: { name: "" },
     projects: [],
-    currentProject: {}
+    currentProject: {},
   },
   mutations: {
     SET_CURRENT_PROJECT(state, project) {
@@ -28,6 +28,9 @@ export default createStore({
       state.currentUser = user;
       window.localStorage.currentUser = JSON.stringify(user);
     },
+    ADD_USER(state, user) {
+      state.users = [...state.users, user];
+    }
   },
   actions: {
     async loadUsers({ commit }) {
@@ -45,15 +48,27 @@ export default createStore({
         `api/users?email=${loginInfo.email}&password=${loginInfo.password}`
       );
       let user = await response.json();
-      console.log(user);
-      commit("SET_CURRENT_USER", user);
+      commit("SET_CURRENT_USER", user[0]);
     },
-    async loadProjects({ commit }, loginInfo) {
-      const response = await fetch(`api/projects`);
+    async loadProjects({ commit }) {
+      const response = await fetch(`api/project`);
       const data = await response.json();
       commit("SET_PROJECTS", data);
+
       const project = JSON.parse(window.localStorage.currentProject);
       commit("SET_CURRENT_PROJECT", project);
+    },
+    async registerUser({commit}, registerInfo) {
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(registerInfo),
+      };
+      const res = await fetch("api/users", requestOptions);
+      const data = await res.json();
+      commit("ADD_USER", data);
     }
   },
 });

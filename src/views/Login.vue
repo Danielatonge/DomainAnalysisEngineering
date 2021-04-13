@@ -39,8 +39,10 @@
       <button
         type="submit"
         class="btn btn-primary"
-        @click.prevent="LoginUser"
-        :disabled="loginInfo.password.length == 0 || loginInfo.email.length == 0"
+        @click.prevent="loginUser"
+        :disabled="
+          loginInfo.password.length == 0 || loginInfo.email.length == 0
+        "
       >
         Login
       </button>
@@ -49,22 +51,22 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       loginInfo: {
         email: "",
         password: "",
-      }
+      },
     };
   },
   computed: {},
   methods: {
     loginUser() {
-      this.$store.dispatch('loginUser', this.loginInfo);
-    }
-  }
+      this.$store.dispatch("loginUser", this.loginInfo);
+      this.$router.push({ name: "Home" });
+    },
+  },
 };
 </script>
 

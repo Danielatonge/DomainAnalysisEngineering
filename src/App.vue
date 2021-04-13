@@ -56,11 +56,11 @@
   </nav>
 
   <router-view />
-  <div class="text-center">
+  <!-- <div class="text-center">
     <div v-for="user in users" :key="user.id">
       {{ user.name }} <div class="btn btn-secondary" @click="loginUser(user)">Login</div>
     </div>
-  </div>
+  </div> -->
 </template>
 <script>
 import { mapState } from "vuex";

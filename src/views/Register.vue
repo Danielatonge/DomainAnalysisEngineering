@@ -59,6 +59,7 @@
           registerInfo.email == 0 ||
           registerInfo.password == 0
         "
+        @click.prevent="registerUser"
       >
         Register
       </button>
@@ -77,7 +78,12 @@ export default {
       },
     };
   },
-  methods: {},
+  methods: {
+    registerUser() {
+      this.$store.dispatch('registerUser', this.registerInfo);
+      this.$router.push({ name: "Login" });
+    }
+  },
 };
 </script>
 

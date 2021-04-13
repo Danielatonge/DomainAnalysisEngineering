@@ -73,13 +73,39 @@
           (tonight). Skip the talk, heard it all, time to walk the walk. Catch
           her if you can. Stinging like a bee I earned my stripes.
         </div>
+
+        <table class="table table-striped mt-5">
+          <thead>
+            <tr>
+              <th scope="col">Project Name</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(row, index) in projects" :key="index">
+              <th scope="row">{{ row.name }}</th>
+              <td>
+                <a href=""> Edit </a>
+                <a href="">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState(["projects"]),
+  },
+  mounted() {
+    this.$store.dispatch("loadProjects");
+  },
+};
 </script>
 
 <style>
