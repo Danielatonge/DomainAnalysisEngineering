@@ -1,0 +1,56 @@
+{
+  "domain": {
+    "feasible": "",
+    "current": "",
+    "strategic": ""
+  },
+  "vocabulary": [
+    {
+      "term": "",
+      "description": ""
+    },
+    {
+      "term": "",
+      "description": ""
+    }
+  ],
+  "product": [
+    {
+      "name": "",
+      "producer": " ",
+      "leader": false,
+      "value": {
+          "internal": " ",
+          "external": " "
+      },
+      "pricing": {
+        "retail": {
+          "standard": {
+            "cost": "",
+            "upgrade": ""
+          },
+          "volume": {
+            "cost": "",
+            "upgrade": ""
+          }
+        },
+        "academic": {
+          "standard": {
+            "cost": "",
+            "upgrade": ""
+          },
+          "volume": {
+            "cost": "",
+            "upgrade": ""
+          }
+        }
+      },
+      "standards": [""],
+      "data_format": {
+          "input": [""],
+          "output": [""]
+      },
+      "complementary_products": []
+    }
+  ]
+}

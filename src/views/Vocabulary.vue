@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+  <div class="container">
     <DomainVocabulary />
 
     <div class="row mt-5 mb-5">
@@ -9,20 +9,24 @@
         </div>
       </div>
     </div>
-</div>
-  
+  </div>
 </template>
 
 <script>
-import DomainVocabulary from '../components/DomainVocabulary.vue'
+import DomainVocabulary from "../components/DomainVocabulary.vue";
 export default {
   components: { DomainVocabulary },
-    name: 'Vocabulary'
-}
+  name: "Vocabulary",
+  data() {
+    return {
+      
+    }
+  }
+};
 </script>
 
 <style>
 div > a {
-    color: #fff;
+  color: #fff;
 }
 </style>

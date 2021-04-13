@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John",
+      "email": "john@gmail.com",
+      "password": "john"
+    },
+    {
+      "id": "2",
+      "name": "Joe",
+      "email": "joe@gmail.com",
+      "password": "joe"
+    },
+    {
+      "id": "3",
+      "name": "Real",
+      "email": "real@gmail.com",
+      "password": "real"
+    }
+  ],
+  "project": [
+    {
+      "id": 1,
+      "name": "Neural Network",
+      "domain": {
+        "feasible": "The feasible domain consisted of providing a neural network analysis tool that is capable for generating code to embed the designed networks. Another option for this domain is to build plug in neural network modules for other analysis tools such as Mathcad and Mathematica. This is a possible domain but is currently viewed as costly at this stage of our development.",
+        "current": "The curirent product domain is the provision of a plug in neural network module to an existing analysis package.",
+        "strategic": "The strategic domain consists of the two market segments: Academic use and Industrial use. In addition to this, the domain also includes the provision of library routines. All three competitors fall into this region. The two user communities should be easily catered for through costing and marketing. The provision of library functions also should be easily attained but may have impact on other domain areas as will be discussed later in domain scoping."
+      },
+      "vocabulary": [
+        {
+          "term": "ANN",
+          "description": "Artificial Neural Network - basic generic descriptive term used for any type of neural network"
+        },
+        {
+          "term": "Neural Network",
+          "description": "A Neural Network is a computational construct, which is modeled after the human brain. Essential elements that make up a network are neurons; representing neural cells of the brain, and synoptic weights; links between neural cells. Neural networks are intended to model the human brain through the act of information processing and learning. The process of learning is used to adaptively adjust the synoptic weights of the network based on certain rules in order to achieve the expected outputs, given certain inputs."
+        },
+        {
+          "term": "Learning",
+          "description": "the process of iteratively changing the weights of a network so to minimize the difference between the achieved results and the expected (target data) results given know inputs."
+        },
+        {
+          "term": "Training Data",
+          "description": "known data which is presented as input to the neural network to obtain results which will be compared to the expected (target) data."
+        },
+        {
+          "term": "Target Data",
+          "description": "expected output values, given known input values. This is used to compare with the actual results so to allow the adjustment of the neural network parameters in the direction to minimize the difference between the two."
+        },
+        {
+          "term": "Topology",
+          "description": "the type and structure of the neural network being used."
+        },
+        {
+          "term": "Learning Algorithm",
+          "description": "the specific type of algorithm used in the training of the neural network."
+        },
+        {
+          "term": "Weights",
+          "description": "the weighting factor which is applied to an input of each individual node or neuron within the neural network. These are individually adjusted in the training phase to achieve the required results from known input data."
+        },
+        {
+          "term": "Hidden Layer",
+          "description": "internal layer(s) of a neural network which interfaces between the input layer and the output layer. This is the area that conducts the complex calculations."
+        },
+        {
+          "term": "Transfer Function",
+          "description": "Specific function which is used within each layer of the neural network."
+        },
+        {
+          "term": "Configure Neural Network",
+          "description": "The action of selecting the topology, the size and learning algorithm of a neural network."
+        },
+        {
+          "term": "Train Neural Network",
+          "description": "The action of setting the training parameters, inputting the training and target data to be used and initiating the training of the neural network."
+        }
+      ],
+      "product": [
+        {
+          "id": 1,
+          "name": "Matlab Neural Network",
+          "description": "- Plug in toolbox for Matlab environment. Must use Matlab main application.\n- Must use script commands in a math/function language.\n- Graphical or text output dependant on commands used. \n- Can generate C code.\n- Will interact with C++ code using Matlab computational engine. I/0 difficult and not well documented.\n- Unix or Windows based.\n- Constructed networks are limited to 3 layers.\n- Supports all traditional and standard topologies and algorithms.",
+          "producer": "Mathworks",
+          "leader": false,
+          "value": {
+            "internal": "Features.\n- Creation of up to a three layered neural network.\n- Support of all standard neural network types and topologies\nQuality\n- Fully integrated, using same format I/O as the Matlab analysis software",
+            "external": "Interoperability between Users.\nUse of standard neural network architecture allows for consistent results as compared with other products. \nInteroperability between Products\nNot Applicable.\nExpectations.\nThis product has a solid base of potential users. As the Matlab line of products have been on the market since 1984, there is confidence in the product and its availability in the future."
+          },
+          "pricing": {
+            "retail": {
+              "standard": {
+                "cost": "$200",
+                "upgrade": ""
+              },
+              "volume": {
+                "cost": "$150",
+                "upgrade": "$100"
+              }
+            },
+            "academic": {
+              "standard": {
+                "cost": "$99",
+                "upgrade": ""
+              },
+              "volume": {
+                "cost": "$99",
+                "upgrade": "$50"
+              }
+            }
+          },
+          "standards": [""],
+          "data_format": {
+            "input": ["ANSI C++", "ANSI C", ".M, .Mex, .MAT"],
+            "output": ["ANSI C++", "ANSI C", ".M, .Mex, .MAT"]
+          },
+          "complementary_products": []
+        }
+      ]
+    }
+  ]
+}
